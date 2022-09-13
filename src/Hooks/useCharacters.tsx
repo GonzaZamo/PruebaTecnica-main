@@ -5,7 +5,7 @@ import CharactersRecoil from '../Store/characters/CharactersRecoil';
 
 function useCharacters() {
   const [charactersList, setCharactersList] = useRecoilState(CharactersRecoil);
-  const [loadingCharacterList, setLoadingCharacterList] = useState(false);
+  const [loadingCharacterList, setLoadingCharacterList] = useState(true);
 
   const getPageCharactersList = async () => {
     const getData = await fetch(`https://rickandmortyapi.com/api/character/?page=${charactersList.activePage}`);
